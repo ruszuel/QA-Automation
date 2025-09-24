@@ -1,4 +1,4 @@
-nav_btn_customer='//a[@href="#/customers"]'
+nav_btn_customer='(//p[text()="Customers"])[2]'
 customer_btn_create='//a[@aria-label="Create"]'
 customer_txt_fname='//input[@name="first_name"]'
 customer_txt_lname='//input[@name="last_name"]'

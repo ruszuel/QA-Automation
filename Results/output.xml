@@ -1,1283 +1,1383 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.3 on linux)" generated="2025-09-24T15:00:54.000291" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="/home/citco/russ/robot-testing/Tests/test.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-25T00:27:56.269005" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\camille\Documents\Russuel\QA-Automation\Tests\test.robot">
 <test id="s1-t1" name="TEST-000001" line="14">
 <kw name="Launch Browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:00:54.325754" level="INFO">Opening browser 'chrome' to base url 'https://marmelab.com/react-admin-demo'.</msg>
+<msg time="2025-09-25T00:27:56.507475" level="INFO">Opening browser 'chrome' to base url 'https://marmelab.com/react-admin-demo'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <arg>options=add_argument("--start-maximized")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-24T15:00:54.325255" elapsed="3.120354"/>
+<status status="PASS" start="2025-09-25T00:27:56.507278" elapsed="2.376373"/>
 </kw>
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${element_to_wait}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:00:57.446777" elapsed="0.806910"/>
+<status status="PASS" start="2025-09-25T00:27:58.884127" elapsed="0.267979"/>
 </kw>
 <arg>5x</arg>
 <arg>.5s</arg>
 <arg>Wait Until Element is Visible</arg>
 <arg>${element_to_wait}</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2025-09-24T15:00:57.446233" elapsed="0.807711"/>
+<status status="PASS" start="2025-09-25T00:27:58.883902" elapsed="0.268330"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${login_txt_username}</arg>
-<status status="PASS" start="2025-09-24T15:00:54.323715" elapsed="3.930433"/>
+<status status="PASS" start="2025-09-25T00:27:56.506688" elapsed="2.645613"/>
 </kw>
 <kw name="Login User">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:00:58.257124" level="INFO">Typing text 'demo' into text field '//input[@name="username"]'.</msg>
+<msg time="2025-09-25T00:27:59.153083" level="INFO">Typing text 'demo' into text field '//input[@name="username"]'.</msg>
 <arg>${login_txt_username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:00:58.256405" elapsed="0.244892"/>
+<status status="PASS" start="2025-09-25T00:27:59.152932" elapsed="0.094230"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:00:58.502047" level="INFO">Typing text 'demo' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:27:59.247510" level="INFO">Typing text 'demo' into text field '//input[@name="password"]'.</msg>
 <arg>${login_txt_password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:00:58.501594" elapsed="0.194154"/>
+<status status="PASS" start="2025-09-25T00:27:59.247313" elapsed="0.054236"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:00:58.696644" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<msg time="2025-09-25T00:27:59.301887" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
 <arg>${login_btn_submit}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:00:58.696231" elapsed="0.280417"/>
+<status status="PASS" start="2025-09-25T00:27:59.301703" elapsed="0.070149"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${dashboard_hdr}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:00:58.986127" elapsed="0.331437"/>
+<status status="PASS" start="2025-09-25T00:27:59.372159" elapsed="0.099410"/>
 </kw>
-<msg time="2025-09-24T15:00:59.318001" level="INFO">${status} = True</msg>
+<msg time="2025-09-25T00:27:59.471709" level="INFO">${status} = True</msg>
 <var>${status}</var>
 <arg>Wait Until Element Is Visible</arg>
 <arg>${dashboard_hdr}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-09-24T15:00:58.982372" elapsed="0.335760"/>
+<status status="PASS" start="2025-09-25T00:27:59.372024" elapsed="0.099710"/>
 </kw>
 <if>
 <branch type="IF" condition="${status}">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Login Successful</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-09-24T15:00:59.319660" elapsed="0.000506"/>
+<status status="PASS" start="2025-09-25T00:27:59.472082" elapsed="0.000339"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:00:59.319233" elapsed="0.001056"/>
+<status status="PASS" start="2025-09-25T00:27:59.471843" elapsed="0.000704"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console Login Failed">
-<status status="NOT RUN" start="2025-09-24T15:00:59.320707" elapsed="0.000063"/>
+<status status="NOT RUN" start="2025-09-25T00:27:59.472851" elapsed="0.000027"/>
 </kw>
-<status status="NOT RUN" start="2025-09-24T15:00:59.320399" elapsed="0.000441"/>
+<status status="NOT RUN" start="2025-09-25T00:27:59.472675" elapsed="0.000232"/>
 </branch>
-<status status="PASS" start="2025-09-24T15:00:59.318713" elapsed="0.002197"/>
+<status status="PASS" start="2025-09-25T00:27:59.471806" elapsed="0.001128"/>
 </if>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-09-24T15:00:58.254784" elapsed="1.066264"/>
+<status status="PASS" start="2025-09-25T00:27:59.152639" elapsed="0.320350"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-24T15:01:09.322230" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-09-25T00:28:09.473743" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-24T15:00:59.321336" elapsed="10.001268"/>
+<status status="PASS" start="2025-09-25T00:27:59.473176" elapsed="10.000869"/>
 </kw>
 <doc>This is a sample test case.</doc>
-<status status="PASS" start="2025-09-24T15:00:54.322476" elapsed="15.000993"/>
+<status status="PASS" start="2025-09-25T00:27:56.506105" elapsed="12.970268"/>
 </test>
 <test id="s1-t2" name="TEST-000002" line="20">
 <kw name="Get Random Users" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:09.559504" level="INFO">/home/citco/robot-env/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-09-25T00:28:09.863409" level="INFO">C:\Users\camille\Documents\Russuel\rusenv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-09-24T15:01:09.560485" level="INFO">${users} = [{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {...</msg>
+<msg time="2025-09-25T00:28:09.866501" level="INFO">${users} = [{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {...</msg>
 <var>${users}</var>
-<status status="PASS" start="2025-09-24T15:01:09.325990" elapsed="0.234679"/>
+<status status="PASS" start="2025-09-25T00:28:09.492916" elapsed="0.373833"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Go To Customers Page" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:09.564782" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
+<msg time="2025-09-25T00:28:09.871504" level="INFO">Clicking element '(//p[text()="Customers"])[2]'.</msg>
 <arg>${nav_btn_customer}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:09.563987" elapsed="0.200430"/>
+<status status="PASS" start="2025-09-25T00:28:09.870859" elapsed="0.363113"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
+<arg>${table}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:09.764736" elapsed="1.198474"/>
+<status status="PASS" start="2025-09-25T00:28:10.234232" elapsed="0.561051"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:09.562866" elapsed="1.400534"/>
+<status status="PASS" start="2025-09-25T00:28:09.869941" elapsed="0.926135"/>
 </kw>
 <kw name="Create User" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:10.964628" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
+<msg time="2025-09-25T00:28:10.799521" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
 <arg>${customer_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:10.964294" elapsed="0.160178"/>
+<status status="PASS" start="2025-09-25T00:28:10.798284" elapsed="0.278361"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${customer_btn_save}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:11.124798" elapsed="0.296907"/>
+<status status="PASS" start="2025-09-25T00:28:11.076997" elapsed="0.304508"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:11.423113" level="INFO">Typing text 'Leanne' into text field '//input[@name="first_name"]'.</msg>
+<msg time="2025-09-25T00:28:11.383218" level="INFO">Typing text 'Leanne' into text field '//input[@name="first_name"]'.</msg>
 <arg>${customer_txt_fname}</arg>
 <arg>${user["name"].split(" ")[0]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:11.422004" elapsed="0.226709"/>
+<status status="PASS" start="2025-09-25T00:28:11.381788" elapsed="0.119288"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:11.650383" level="INFO">Typing text 'Graham' into text field '//input[@name="last_name"]'.</msg>
+<msg time="2025-09-25T00:28:11.502806" level="INFO">Typing text 'Graham' into text field '//input[@name="last_name"]'.</msg>
 <arg>${customer_txt_lname}</arg>
 <arg>${user["name"].split(" ")[1]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:11.649087" elapsed="0.253020"/>
+<status status="PASS" start="2025-09-25T00:28:11.501392" elapsed="0.138145"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:11.905209" level="INFO">Typing text 'Sincere@april.biz' into text field '//input[@name="email"]'.</msg>
+<msg time="2025-09-25T00:28:11.640646" level="INFO">Typing text 'Sincere@april.biz' into text field '//input[@name="email"]'.</msg>
 <arg>${customer_txt_email}</arg>
 <arg>${user["email"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:11.902427" elapsed="0.292415"/>
+<status status="PASS" start="2025-09-25T00:28:11.639800" elapsed="0.111488"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:11.752288" level="INFO">Sending key(s) ('CONTROL+A', 'BACKSPACE') to //input[@name="birthday"] element.</msg>
+<msg time="2025-09-25T00:28:12.064964" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-09-25T00:28:12.065609" level="INFO">Sending key A</msg>
+<msg time="2025-09-25T00:28:12.065976" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-09-25T00:28:12.101333" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-09-25T00:28:12.101826" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${customer_txt_birthday}</arg>
+<arg>CONTROL+A</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-25T00:28:11.751549" elapsed="0.375759"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:12.196975" level="INFO">Typing text '08052006' into text field '//input[@name="birthday"]'.</msg>
+<msg time="2025-09-25T00:28:12.130655" level="INFO">Typing text '01112006' into text field '//input[@name="birthday"]'.</msg>
 <arg>${customer_txt_birthday}</arg>
 <arg>${user["birthday"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:12.195546" elapsed="0.244985"/>
+<status status="PASS" start="2025-09-25T00:28:12.127865" elapsed="0.088066"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:12.442848" level="INFO">Typing text 'Kulas Light Apt. 556' into text field '//textarea[@name="address"]'.</msg>
+<msg time="2025-09-25T00:28:12.217569" level="INFO">Typing text 'Kulas Light Apt. 556' into text field '//textarea[@name="address"]'.</msg>
 <arg>${customer_txt_address}</arg>
 <arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:12.440942" elapsed="0.319505"/>
+<status status="PASS" start="2025-09-25T00:28:12.216267" elapsed="0.102631"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:12.761795" level="INFO">Typing text 'Gwenborough' into text field '//input[@name="city"]'.</msg>
+<msg time="2025-09-25T00:28:12.320146" level="INFO">Typing text 'Gwenborough' into text field '//input[@name="city"]'.</msg>
 <arg>${customer_txt_city}</arg>
 <arg>${user["address"]["city"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:12.760732" elapsed="0.260636"/>
+<status status="PASS" start="2025-09-25T00:28:12.319134" elapsed="0.086905"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:13.022678" level="INFO">Typing text 'KAG' into text field '//input[@name="stateAbbr"]'.</msg>
+<msg time="2025-09-25T00:28:12.407197" level="INFO">Typing text 'KAG' into text field '//input[@name="stateAbbr"]'.</msg>
 <arg>${customer_txt_stateAbbr}</arg>
 <arg>${user["address"]["stateAbbr"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:13.021662" elapsed="0.212855"/>
+<status status="PASS" start="2025-09-25T00:28:12.406268" elapsed="0.082931"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:13.236378" level="INFO">Typing text '92998-3874' into text field '//input[@name="zipcode"]'.</msg>
+<msg time="2025-09-25T00:28:12.490176" level="INFO">Typing text '92998-3874' into text field '//input[@name="zipcode"]'.</msg>
 <arg>${customer_txt_zipcode}</arg>
 <arg>${user["address"]["zipcode"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:13.234849" elapsed="0.291011"/>
+<status status="PASS" start="2025-09-25T00:28:12.489435" elapsed="0.113186"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:13.527274" level="INFO">Typing text 'ji8VlVsf' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:28:12.603820" level="INFO">Typing text 'F9nd8%kR' into text field '//input[@name="password"]'.</msg>
 <arg>${customer_txt_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:13.526171" elapsed="0.230785"/>
+<status status="PASS" start="2025-09-25T00:28:12.602861" elapsed="0.075632"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:13.759070" level="INFO">Typing text 'ji8VlVsf' into text field '//input[@name="confirm_password"]'.</msg>
+<msg time="2025-09-25T00:28:12.679509" level="INFO">Typing text 'F9nd8%kR' into text field '//input[@name="confirm_password"]'.</msg>
 <arg>${customer_txt_confirm_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:13.757295" elapsed="0.254392"/>
+<status status="PASS" start="2025-09-25T00:28:12.678725" elapsed="0.084771"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.012791" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
+<msg time="2025-09-25T00:28:12.764025" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
 <arg>${customer_btn_save}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.012140" elapsed="0.230154"/>
+<status status="PASS" start="2025-09-25T00:28:12.763724" elapsed="0.060636"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.444105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-89.png"&gt;&lt;img src="selenium-screenshot-89.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.242627" elapsed="0.201732"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Customer created</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:12.824506" elapsed="0.455527"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:10.963749" elapsed="3.480869"/>
+<status status="PASS" start="2025-09-25T00:28:10.797149" elapsed="2.483047"/>
 </kw>
 <kw name="Verify Customer Data" owner="CustomerPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>History</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.281436" elapsed="0.015866"/>
+</kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.487005" level="INFO">${first_name} = Leanne</msg>
+<msg time="2025-09-25T00:28:13.314729" level="INFO">${first_name} = Leanne</msg>
 <var>${first_name}</var>
 <arg>${customer_txt_fname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.450011" elapsed="0.037074"/>
+<status status="PASS" start="2025-09-25T00:28:13.297456" elapsed="0.017342"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.513330" level="INFO">${last_name} = Graham</msg>
+<msg time="2025-09-25T00:28:13.352158" level="INFO">${last_name} = Graham</msg>
 <var>${last_name}</var>
 <arg>${customer_txt_lname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.487350" elapsed="0.026110"/>
+<status status="PASS" start="2025-09-25T00:28:13.315045" elapsed="0.037361"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.543022" level="INFO">${customer_email} = Sincere@april.biz</msg>
+<msg time="2025-09-25T00:28:13.383922" level="INFO">${customer_email} = Sincere@april.biz</msg>
 <var>${customer_email}</var>
 <arg>${customer_txt_email}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.513898" elapsed="0.029205"/>
+<status status="PASS" start="2025-09-25T00:28:13.353306" elapsed="0.030706"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.718743" level="INFO">${customer_birthday} = 2006-08-05</msg>
-<var>${customer_birthday}</var>
+<msg time="2025-09-25T00:28:13.404864" level="INFO">${birthday} = 2006-11-01</msg>
+<var>${birthday}</var>
 <arg>${customer_txt_birthday}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.543381" elapsed="0.175588"/>
+<status status="PASS" start="2025-09-25T00:28:13.384317" elapsed="0.020607"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:13.424163" level="INFO">${customer_address} = Kulas Light Apt. 556</msg>
+<var>${customer_address}</var>
+<arg>${customer_txt_address}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.405152" elapsed="0.019069"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:13.439574" level="INFO">${customer_city} = Gwenborough</msg>
+<var>${customer_city}</var>
+<arg>${customer_txt_city}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.424426" elapsed="0.015205"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:13.451654" level="INFO">${customer_state} = KAG</msg>
+<var>${customer_state}</var>
+<arg>${customer_txt_stateAbbr}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.439836" elapsed="0.011875"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:13.464315" level="INFO">${customer_zipcode} = 92998-3874</msg>
+<var>${customer_zipcode}</var>
+<arg>${customer_txt_zipcode}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.451924" elapsed="0.012444"/>
 </kw>
 <kw name="Format Date" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:14.721442" level="INFO">${formatted_date} = 2006-08-05</msg>
+<msg time="2025-09-25T00:28:13.465271" level="INFO">${formatted_date} = 2006-11-01</msg>
 <var>${formatted_date}</var>
 <arg>${user["birthday"]}</arg>
-<status status="PASS" start="2025-09-24T15:01:14.719388" elapsed="0.002136"/>
+<status status="PASS" start="2025-09-25T00:28:13.464562" elapsed="0.000743"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>'${formatted_date}'</arg>
-<arg>'${customer_birthday}'</arg>
+<arg>${user["name"].split(" ")[0]}</arg>
+<arg>${first_name}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.721999" elapsed="0.000536"/>
+<status status="PASS" start="2025-09-25T00:28:13.465428" elapsed="0.001088"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:14.724743" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:14.722852" elapsed="0.471368"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["name"].split(" ")[1]}</arg>
+<arg>${last_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.466966" elapsed="0.001096"/>
 </kw>
-<arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:14.445168" elapsed="0.749259"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["email"]}</arg>
+<arg>${customer_email}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.468289" elapsed="0.001063"/>
 </kw>
-<kw name="Verify User Is Added">
-<kw name="Go To Customers Page" owner="CustomerPage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:15.200521" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:15.199503" elapsed="0.701268"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
+<arg>${customer_address}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.469668" elapsed="0.001644"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:15.902021" elapsed="0.107153"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["city"]}</arg>
+<arg>${customer_city}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.471528" elapsed="0.000992"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:15.196677" elapsed="0.812878"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["stateAbbr"]}</arg>
+<arg>${customer_state}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.472733" elapsed="0.000950"/>
 </kw>
-<kw name="Refresh Current Page" owner="App">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:16.011168" level="INFO">Clicking button '//button[@aria-label="Refresh"]'.</msg>
-<arg>${btn_refresh}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.010657" elapsed="0.428078"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["zipcode"]}</arg>
+<arg>${customer_zipcode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.473896" elapsed="0.000915"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.439105" elapsed="0.064349"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.503725" elapsed="0.290134"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:16.010062" elapsed="0.784201"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:16.873513" level="INFO">${fetched_name} = L
-Leanne Graham</msg>
-<var>${fetched_name}</var>
-<arg>((${table})[1]//td)[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.794767" elapsed="0.078832"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;\\n&quot; in &quot;&quot;&quot;${fetched_name}&quot;&quot;&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-24T15:01:16.875099" level="INFO">${fetched_name} = Leanne Graham</msg>
-<var>${fetched_name}</var>
-<arg>"""${fetched_name}""".replace("\\n","")[1:]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.874462" elapsed="0.000715"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:16.873835" elapsed="0.001463"/>
-</branch>
-<status status="PASS" start="2025-09-24T15:01:16.873777" elapsed="0.001619"/>
-</if>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${user["name"]}</arg>
-<arg>${fetched_name}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.875610" elapsed="0.001176"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Formatted Date: ${formatted_date} | Fetched Date: ${birthday}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-25T00:28:13.475022" elapsed="0.001397"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:15.194834" elapsed="1.682154"/>
+<status status="PASS" start="2025-09-25T00:28:13.280539" elapsed="0.196062"/>
 </kw>
 <var name="${user}">{'id': 1, 'name': 'Leanne Graham', 'username': 'Bret', 'email': 'Sincere@april.biz', 'address': {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'...</var>
-<status status="PASS" start="2025-09-24T15:01:09.562240" elapsed="7.314833"/>
+<status status="PASS" start="2025-09-25T00:28:09.869157" elapsed="3.607539"/>
 </iter>
 <iter>
 <kw name="Go To Customers Page" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:16.881088" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
+<msg time="2025-09-25T00:28:13.478097" level="INFO">Clicking element '(//p[text()="Customers"])[2]'.</msg>
 <arg>${nav_btn_customer}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:16.878103" elapsed="0.178654"/>
+<status status="PASS" start="2025-09-25T00:28:13.477753" elapsed="0.081868"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
+<arg>${table}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:17.057087" elapsed="0.073365"/>
+<status status="PASS" start="2025-09-25T00:28:13.559847" elapsed="0.253844"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:16.877631" elapsed="0.253204"/>
+<status status="PASS" start="2025-09-25T00:28:13.477302" elapsed="0.336552"/>
 </kw>
 <kw name="Create User" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:17.132555" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
+<msg time="2025-09-25T00:28:13.815487" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
 <arg>${customer_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:17.132113" elapsed="0.169789"/>
+<status status="PASS" start="2025-09-25T00:28:13.814586" elapsed="0.064527"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${customer_btn_save}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:17.302405" elapsed="0.382778"/>
+<status status="PASS" start="2025-09-25T00:28:13.879449" elapsed="0.059982"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:17.687758" level="INFO">Typing text 'Ervin' into text field '//input[@name="first_name"]'.</msg>
+<msg time="2025-09-25T00:28:13.941074" level="INFO">Typing text 'Ervin' into text field '//input[@name="first_name"]'.</msg>
 <arg>${customer_txt_fname}</arg>
 <arg>${user["name"].split(" ")[0]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:17.685710" elapsed="0.297832"/>
+<status status="PASS" start="2025-09-25T00:28:13.939793" elapsed="0.081135"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:17.985557" level="INFO">Typing text 'Howell' into text field '//input[@name="last_name"]'.</msg>
+<msg time="2025-09-25T00:28:14.022292" level="INFO">Typing text 'Howell' into text field '//input[@name="last_name"]'.</msg>
 <arg>${customer_txt_lname}</arg>
 <arg>${user["name"].split(" ")[1]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:17.984057" elapsed="0.222254"/>
+<status status="PASS" start="2025-09-25T00:28:14.021193" elapsed="0.087506"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:18.208154" level="INFO">Typing text 'Shanna@melissa.tv' into text field '//input[@name="email"]'.</msg>
+<msg time="2025-09-25T00:28:14.109693" level="INFO">Typing text 'Shanna@melissa.tv' into text field '//input[@name="email"]'.</msg>
 <arg>${customer_txt_email}</arg>
 <arg>${user["email"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:18.206647" elapsed="0.264995"/>
+<status status="PASS" start="2025-09-25T00:28:14.108926" elapsed="0.109188"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:14.225723" level="INFO">Sending key(s) ('CONTROL+A', 'BACKSPACE') to //input[@name="birthday"] element.</msg>
+<msg time="2025-09-25T00:28:14.534034" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-09-25T00:28:14.534210" level="INFO">Sending key A</msg>
+<msg time="2025-09-25T00:28:14.534299" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-09-25T00:28:14.568412" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-09-25T00:28:14.568552" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${customer_txt_birthday}</arg>
+<arg>CONTROL+A</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-25T00:28:14.218351" elapsed="0.383329"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:18.473349" level="INFO">Typing text '10251999' into text field '//input[@name="birthday"]'.</msg>
+<msg time="2025-09-25T00:28:14.604262" level="INFO">Typing text '07092000' into text field '//input[@name="birthday"]'.</msg>
 <arg>${customer_txt_birthday}</arg>
 <arg>${user["birthday"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:18.471984" elapsed="0.248125"/>
+<status status="PASS" start="2025-09-25T00:28:14.602331" elapsed="0.096547"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:18.722511" level="INFO">Typing text 'Victor Plains Suite 879' into text field '//textarea[@name="address"]'.</msg>
+<msg time="2025-09-25T00:28:14.701213" level="INFO">Typing text 'Victor Plains Suite 879' into text field '//textarea[@name="address"]'.</msg>
 <arg>${customer_txt_address}</arg>
 <arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:18.720427" elapsed="0.323376"/>
+<status status="PASS" start="2025-09-25T00:28:14.699256" elapsed="0.127879"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:19.047351" level="INFO">Typing text 'Wisokyburgh' into text field '//input[@name="city"]'.</msg>
+<msg time="2025-09-25T00:28:14.828381" level="INFO">Typing text 'Wisokyburgh' into text field '//input[@name="city"]'.</msg>
 <arg>${customer_txt_city}</arg>
 <arg>${user["address"]["city"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:19.044236" elapsed="0.226625"/>
+<status status="PASS" start="2025-09-25T00:28:14.827366" elapsed="0.083332"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:19.272637" level="INFO">Typing text 'VSW' into text field '//input[@name="stateAbbr"]'.</msg>
+<msg time="2025-09-25T00:28:14.911808" level="INFO">Typing text 'VSW' into text field '//input[@name="stateAbbr"]'.</msg>
 <arg>${customer_txt_stateAbbr}</arg>
 <arg>${user["address"]["stateAbbr"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:19.271329" elapsed="0.200921"/>
+<status status="PASS" start="2025-09-25T00:28:14.910933" elapsed="0.092505"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:19.473673" level="INFO">Typing text '90566-7771' into text field '//input[@name="zipcode"]'.</msg>
+<msg time="2025-09-25T00:28:15.004026" level="INFO">Typing text '90566-7771' into text field '//input[@name="zipcode"]'.</msg>
 <arg>${customer_txt_zipcode}</arg>
 <arg>${user["address"]["zipcode"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:19.472615" elapsed="0.232818"/>
+<status status="PASS" start="2025-09-25T00:28:15.003583" elapsed="0.100673"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:19.707661" level="INFO">Typing text 'o5ko#yjA' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:28:15.104968" level="INFO">Typing text 'N5IfIR2l' into text field '//input[@name="password"]'.</msg>
 <arg>${customer_txt_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:19.705724" elapsed="0.265326"/>
+<status status="PASS" start="2025-09-25T00:28:15.104477" elapsed="0.091525"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:19.973174" level="INFO">Typing text 'o5ko#yjA' into text field '//input[@name="confirm_password"]'.</msg>
+<msg time="2025-09-25T00:28:15.200291" level="INFO">Typing text 'N5IfIR2l' into text field '//input[@name="confirm_password"]'.</msg>
 <arg>${customer_txt_confirm_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:19.971364" elapsed="0.241177"/>
+<status status="PASS" start="2025-09-25T00:28:15.196490" elapsed="0.191227"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.213346" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
+<msg time="2025-09-25T00:28:15.388228" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
 <arg>${customer_btn_save}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.212870" elapsed="0.211987"/>
+<status status="PASS" start="2025-09-25T00:28:15.387951" elapsed="0.066320"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.581235" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-90.png"&gt;&lt;img src="selenium-screenshot-90.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.425211" elapsed="0.156207"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Customer created</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:15.454417" elapsed="0.472401"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:17.131273" elapsed="3.450327"/>
+<status status="PASS" start="2025-09-25T00:28:13.814162" elapsed="2.113457"/>
 </kw>
 <kw name="Verify Customer Data" owner="CustomerPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>History</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:15.931142" elapsed="0.049137"/>
+</kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.610804" level="INFO">${first_name} = Ervin</msg>
+<msg time="2025-09-25T00:28:16.035547" level="INFO">${first_name} = Ervin</msg>
 <var>${first_name}</var>
 <arg>${customer_txt_fname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.582679" elapsed="0.028200"/>
+<status status="PASS" start="2025-09-25T00:28:15.981613" elapsed="0.054116"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.641991" level="INFO">${last_name} = Howell</msg>
+<msg time="2025-09-25T00:28:16.087375" level="INFO">${last_name} = Howell</msg>
 <var>${last_name}</var>
 <arg>${customer_txt_lname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.612087" elapsed="0.029983"/>
+<status status="PASS" start="2025-09-25T00:28:16.036368" elapsed="0.051149"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.672940" level="INFO">${customer_email} = Shanna@melissa.tv</msg>
+<msg time="2025-09-25T00:28:16.118840" level="INFO">${customer_email} = Shanna@melissa.tv</msg>
 <var>${customer_email}</var>
 <arg>${customer_txt_email}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.642334" elapsed="0.030685"/>
+<status status="PASS" start="2025-09-25T00:28:16.088044" elapsed="0.030854"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.700497" level="INFO">${customer_birthday} = 1999-10-25</msg>
-<var>${customer_birthday}</var>
+<msg time="2025-09-25T00:28:16.136573" level="INFO">${birthday} = 2000-09-07</msg>
+<var>${birthday}</var>
 <arg>${customer_txt_birthday}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.673277" elapsed="0.027298"/>
+<status status="PASS" start="2025-09-25T00:28:16.119110" elapsed="0.017521"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:16.149783" level="INFO">${customer_address} = Victor Plains Suite 879</msg>
+<var>${customer_address}</var>
+<arg>${customer_txt_address}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.136849" elapsed="0.013018"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:16.161576" level="INFO">${customer_city} = Wisokyburgh</msg>
+<var>${customer_city}</var>
+<arg>${customer_txt_city}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.150087" elapsed="0.011574"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:16.175292" level="INFO">${customer_state} = VSW</msg>
+<var>${customer_state}</var>
+<arg>${customer_txt_stateAbbr}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.161966" elapsed="0.013415"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:16.183441" level="INFO">${customer_zipcode} = 90566-7771</msg>
+<var>${customer_zipcode}</var>
+<arg>${customer_txt_zipcode}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.175702" elapsed="0.007772"/>
 </kw>
 <kw name="Format Date" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:20.701925" level="INFO">${formatted_date} = 1999-10-25</msg>
+<msg time="2025-09-25T00:28:16.184009" level="INFO">${formatted_date} = 2000-09-07</msg>
 <var>${formatted_date}</var>
 <arg>${user["birthday"]}</arg>
-<status status="PASS" start="2025-09-24T15:01:20.700823" elapsed="0.001168"/>
+<status status="PASS" start="2025-09-25T00:28:16.183581" elapsed="0.000451"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>'${formatted_date}'</arg>
-<arg>'${customer_birthday}'</arg>
+<arg>${user["name"].split(" ")[0]}</arg>
+<arg>${first_name}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.702217" elapsed="0.000392"/>
+<status status="PASS" start="2025-09-25T00:28:16.184165" elapsed="0.000472"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:20.703161" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:20.702825" elapsed="0.531935"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["name"].split(" ")[1]}</arg>
+<arg>${last_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.184744" elapsed="0.000359"/>
 </kw>
-<arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:20.582008" elapsed="0.652983"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["email"]}</arg>
+<arg>${customer_email}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.185184" elapsed="0.000354"/>
 </kw>
-<kw name="Verify User Is Added">
-<kw name="Go To Customers Page" owner="CustomerPage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:21.242497" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:21.242069" elapsed="0.609534"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
+<arg>${customer_address}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.185606" elapsed="0.001203"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:21.851959" elapsed="0.076025"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["city"]}</arg>
+<arg>${customer_city}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.186882" elapsed="0.000327"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:21.240881" elapsed="0.687599"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["stateAbbr"]}</arg>
+<arg>${customer_state}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.187275" elapsed="0.000301"/>
 </kw>
-<kw name="Refresh Current Page" owner="App">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:21.930471" level="INFO">Clicking button '//button[@aria-label="Refresh"]'.</msg>
-<arg>${btn_refresh}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:21.930039" elapsed="0.405035"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["zipcode"]}</arg>
+<arg>${customer_zipcode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.187641" elapsed="0.000904"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:22.335360" elapsed="0.035101"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:22.370732" elapsed="0.566367"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:21.929068" elapsed="1.008340"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:22.998044" level="INFO">${fetched_name} = E
-Ervin Howell</msg>
-<var>${fetched_name}</var>
-<arg>((${table})[1]//td)[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:22.937789" elapsed="0.060442"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;\\n&quot; in &quot;&quot;&quot;${fetched_name}&quot;&quot;&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-24T15:01:23.001844" level="INFO">${fetched_name} = Ervin Howell</msg>
-<var>${fetched_name}</var>
-<arg>"""${fetched_name}""".replace("\\n","")[1:]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.000829" elapsed="0.001454"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:22.998709" elapsed="0.003771"/>
-</branch>
-<status status="PASS" start="2025-09-24T15:01:22.998590" elapsed="0.004042"/>
-</if>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${user["name"]}</arg>
-<arg>${fetched_name}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.002989" elapsed="0.001958"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Formatted Date: ${formatted_date} | Fetched Date: ${birthday}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-25T00:28:16.188945" elapsed="0.000861"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:21.235416" elapsed="1.769834"/>
+<status status="PASS" start="2025-09-25T00:28:15.928990" elapsed="0.260889"/>
 </kw>
 <var name="${user}">{'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'g...</var>
-<status status="PASS" start="2025-09-24T15:01:16.877366" elapsed="6.128031"/>
+<status status="PASS" start="2025-09-25T00:28:13.477034" elapsed="2.712879"/>
 </iter>
 <iter>
 <kw name="Go To Customers Page" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:23.007680" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
+<msg time="2025-09-25T00:28:16.190410" level="INFO">Clicking element '(//p[text()="Customers"])[2]'.</msg>
 <arg>${nav_btn_customer}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.007089" elapsed="0.243388"/>
+<status status="PASS" start="2025-09-25T00:28:16.190283" elapsed="0.120303"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
+<arg>${table}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.250802" elapsed="0.075403"/>
+<status status="PASS" start="2025-09-25T00:28:16.311678" elapsed="0.271104"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:23.006323" elapsed="0.320073"/>
+<status status="PASS" start="2025-09-25T00:28:16.190113" elapsed="0.392813"/>
 </kw>
 <kw name="Create User" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:23.327740" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
+<msg time="2025-09-25T00:28:16.583940" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
 <arg>${customer_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.327317" elapsed="0.160169"/>
+<status status="PASS" start="2025-09-25T00:28:16.583662" elapsed="0.054803"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${customer_btn_save}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.487788" elapsed="0.357431"/>
+<status status="PASS" start="2025-09-25T00:28:16.638706" elapsed="0.041968"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:23.847131" level="INFO">Typing text 'Clementine' into text field '//input[@name="first_name"]'.</msg>
+<msg time="2025-09-25T00:28:16.681703" level="INFO">Typing text 'Clementine' into text field '//input[@name="first_name"]'.</msg>
 <arg>${customer_txt_fname}</arg>
 <arg>${user["name"].split(" ")[0]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:23.845590" elapsed="0.295647"/>
+<status status="PASS" start="2025-09-25T00:28:16.680902" elapsed="0.150315"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:24.142555" level="INFO">Typing text 'Bauch' into text field '//input[@name="last_name"]'.</msg>
+<msg time="2025-09-25T00:28:16.832231" level="INFO">Typing text 'Bauch' into text field '//input[@name="last_name"]'.</msg>
 <arg>${customer_txt_lname}</arg>
 <arg>${user["name"].split(" ")[1]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:24.141516" elapsed="0.251715"/>
+<status status="PASS" start="2025-09-25T00:28:16.831483" elapsed="0.088999"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:24.396807" level="INFO">Typing text 'Nathan@yesenia.net' into text field '//input[@name="email"]'.</msg>
+<msg time="2025-09-25T00:28:16.921577" level="INFO">Typing text 'Nathan@yesenia.net' into text field '//input[@name="email"]'.</msg>
 <arg>${customer_txt_email}</arg>
 <arg>${user["email"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:24.393502" elapsed="0.271807"/>
+<status status="PASS" start="2025-09-25T00:28:16.920756" elapsed="0.103054"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:17.024949" level="INFO">Sending key(s) ('CONTROL+A', 'BACKSPACE') to //input[@name="birthday"] element.</msg>
+<msg time="2025-09-25T00:28:17.330708" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-09-25T00:28:17.331047" level="INFO">Sending key A</msg>
+<msg time="2025-09-25T00:28:17.331258" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-09-25T00:28:17.351512" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-09-25T00:28:17.351777" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${customer_txt_birthday}</arg>
+<arg>CONTROL+A</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-25T00:28:17.024177" elapsed="0.343552"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:24.668019" level="INFO">Typing text '12272006' into text field '//input[@name="birthday"]'.</msg>
+<msg time="2025-09-25T00:28:17.369539" level="INFO">Typing text '04152002' into text field '//input[@name="birthday"]'.</msg>
 <arg>${customer_txt_birthday}</arg>
 <arg>${user["birthday"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:24.665626" elapsed="0.233593"/>
+<status status="PASS" start="2025-09-25T00:28:17.368128" elapsed="0.107027"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:24.901814" level="INFO">Typing text 'Douglas Extension Suite 847' into text field '//textarea[@name="address"]'.</msg>
+<msg time="2025-09-25T00:28:17.476581" level="INFO">Typing text 'Douglas Extension Suite 847' into text field '//textarea[@name="address"]'.</msg>
 <arg>${customer_txt_address}</arg>
 <arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:24.899530" elapsed="0.343645"/>
+<status status="PASS" start="2025-09-25T00:28:17.475461" elapsed="0.111113"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:25.246341" level="INFO">Typing text 'McKenziehaven' into text field '//input[@name="city"]'.</msg>
+<msg time="2025-09-25T00:28:17.587533" level="INFO">Typing text 'McKenziehaven' into text field '//input[@name="city"]'.</msg>
 <arg>${customer_txt_city}</arg>
 <arg>${user["address"]["city"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:25.243501" elapsed="0.332623"/>
+<status status="PASS" start="2025-09-25T00:28:17.586814" elapsed="0.087872"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:25.579220" level="INFO">Typing text 'DSM' into text field '//input[@name="stateAbbr"]'.</msg>
+<msg time="2025-09-25T00:28:17.675894" level="INFO">Typing text 'DSM' into text field '//input[@name="stateAbbr"]'.</msg>
 <arg>${customer_txt_stateAbbr}</arg>
 <arg>${user["address"]["stateAbbr"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:25.576404" elapsed="0.201218"/>
+<status status="PASS" start="2025-09-25T00:28:17.674921" elapsed="0.062668"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:25.779322" level="INFO">Typing text '59590-4157' into text field '//input[@name="zipcode"]'.</msg>
+<msg time="2025-09-25T00:28:17.738231" level="INFO">Typing text '59590-4157' into text field '//input[@name="zipcode"]'.</msg>
 <arg>${customer_txt_zipcode}</arg>
 <arg>${user["address"]["zipcode"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:25.777949" elapsed="0.272670"/>
+<status status="PASS" start="2025-09-25T00:28:17.737732" elapsed="0.123338"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.056138" level="INFO">Typing text 'sXDX57ul' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:28:17.862315" level="INFO">Typing text 'DMZ#zSpL' into text field '//input[@name="password"]'.</msg>
 <arg>${customer_txt_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.050937" elapsed="0.301638"/>
+<status status="PASS" start="2025-09-25T00:28:17.861288" elapsed="0.076365"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.354106" level="INFO">Typing text 'sXDX57ul' into text field '//input[@name="confirm_password"]'.</msg>
+<msg time="2025-09-25T00:28:17.938637" level="INFO">Typing text 'DMZ#zSpL' into text field '//input[@name="confirm_password"]'.</msg>
 <arg>${customer_txt_confirm_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.352982" elapsed="0.234431"/>
+<status status="PASS" start="2025-09-25T00:28:17.937878" elapsed="0.056603"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.588117" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
+<msg time="2025-09-25T00:28:17.995796" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
 <arg>${customer_btn_save}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.587701" elapsed="0.185687"/>
+<status status="PASS" start="2025-09-25T00:28:17.995370" elapsed="0.049262"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.926896" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-91.png"&gt;&lt;img src="selenium-screenshot-91.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.773691" elapsed="0.154441"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Customer created</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.044880" elapsed="0.478801"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:23.326743" elapsed="3.601710"/>
+<status status="PASS" start="2025-09-25T00:28:16.583220" elapsed="1.941147"/>
 </kw>
 <kw name="Verify Customer Data" owner="CustomerPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>History</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.528512" elapsed="0.040566"/>
+</kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.958812" level="INFO">${first_name} = Clementine</msg>
+<msg time="2025-09-25T00:28:18.614966" level="INFO">${first_name} = Clementine</msg>
 <var>${first_name}</var>
 <arg>${customer_txt_fname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.929797" elapsed="0.029090"/>
+<status status="PASS" start="2025-09-25T00:28:18.570379" elapsed="0.044676"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:26.987854" level="INFO">${last_name} = Bauch</msg>
+<msg time="2025-09-25T00:28:18.649260" level="INFO">${last_name} = Bauch</msg>
 <var>${last_name}</var>
 <arg>${customer_txt_lname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.959170" elapsed="0.028784"/>
+<status status="PASS" start="2025-09-25T00:28:18.615386" elapsed="0.033946"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:27.019015" level="INFO">${customer_email} = Nathan@yesenia.net</msg>
+<msg time="2025-09-25T00:28:18.670328" level="INFO">${customer_email} = Nathan@yesenia.net</msg>
 <var>${customer_email}</var>
 <arg>${customer_txt_email}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:26.988213" elapsed="0.030888"/>
+<status status="PASS" start="2025-09-25T00:28:18.649581" elapsed="0.020806"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:27.055861" level="INFO">${customer_birthday} = 2006-12-27</msg>
-<var>${customer_birthday}</var>
+<msg time="2025-09-25T00:28:18.685256" level="INFO">${birthday} = 2002-12-04</msg>
+<var>${birthday}</var>
 <arg>${customer_txt_birthday}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:27.019374" elapsed="0.037489"/>
+<status status="PASS" start="2025-09-25T00:28:18.670708" elapsed="0.014641"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:18.700585" level="INFO">${customer_address} = Douglas Extension Suite 847</msg>
+<var>${customer_address}</var>
+<arg>${customer_txt_address}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.685683" elapsed="0.014994"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:18.717690" level="INFO">${customer_city} = McKenziehaven</msg>
+<var>${customer_city}</var>
+<arg>${customer_txt_city}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.701004" elapsed="0.016745"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:18.734214" level="INFO">${customer_state} = DSM</msg>
+<var>${customer_state}</var>
+<arg>${customer_txt_stateAbbr}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.717949" elapsed="0.016356"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:18.748084" level="INFO">${customer_zipcode} = 59590-4157</msg>
+<var>${customer_zipcode}</var>
+<arg>${customer_txt_zipcode}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.734634" elapsed="0.013540"/>
 </kw>
 <kw name="Format Date" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:27.058292" level="INFO">${formatted_date} = 2006-12-27</msg>
+<msg time="2025-09-25T00:28:18.749738" level="INFO">${formatted_date} = 2002-15-04</msg>
 <var>${formatted_date}</var>
 <arg>${user["birthday"]}</arg>
-<status status="PASS" start="2025-09-24T15:01:27.057180" elapsed="0.001178"/>
+<status status="PASS" start="2025-09-25T00:28:18.748488" elapsed="0.001313"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>'${formatted_date}'</arg>
-<arg>'${customer_birthday}'</arg>
+<arg>${user["name"].split(" ")[0]}</arg>
+<arg>${first_name}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-24T15:01:27.058595" elapsed="0.000417"/>
+<status status="PASS" start="2025-09-25T00:28:18.750017" elapsed="0.001100"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:27.059550" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:27.059229" elapsed="0.424324"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["name"].split(" ")[1]}</arg>
+<arg>${last_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.751343" elapsed="0.000987"/>
 </kw>
-<arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:26.929151" elapsed="0.554620"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["email"]}</arg>
+<arg>${customer_email}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.752542" elapsed="0.001842"/>
 </kw>
-<kw name="Verify User Is Added">
-<kw name="Go To Customers Page" owner="CustomerPage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:27.488532" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:27.486803" elapsed="0.753518"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
+<arg>${customer_address}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.754665" elapsed="0.000994"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:28.240621" elapsed="0.072108"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["city"]}</arg>
+<arg>${customer_city}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.755791" elapsed="0.000525"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:27.486233" elapsed="0.826732"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["stateAbbr"]}</arg>
+<arg>${customer_state}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.756434" elapsed="0.000519"/>
 </kw>
-<kw name="Refresh Current Page" owner="App">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:28.316441" level="INFO">Clicking button '//button[@aria-label="Refresh"]'.</msg>
-<arg>${btn_refresh}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:28.313822" elapsed="0.409909"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["zipcode"]}</arg>
+<arg>${customer_zipcode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.757080" elapsed="0.000520"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:28.724085" elapsed="0.082899"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:28.807265" elapsed="0.283378"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:28.313309" elapsed="0.777677"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:29.151506" level="INFO">${fetched_name} = C
-Clementine Bauch</msg>
-<var>${fetched_name}</var>
-<arg>((${table})[1]//td)[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.091371" elapsed="0.060433"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;\\n&quot; in &quot;&quot;&quot;${fetched_name}&quot;&quot;&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-24T15:01:29.154009" level="INFO">${fetched_name} = Clementine Bauch</msg>
-<var>${fetched_name}</var>
-<arg>"""${fetched_name}""".replace("\\n","")[1:]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.153173" elapsed="0.000942"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:29.152263" elapsed="0.002016"/>
-</branch>
-<status status="PASS" start="2025-09-24T15:01:29.152159" elapsed="0.002251"/>
-</if>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${user["name"]}</arg>
-<arg>${fetched_name}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.154695" elapsed="0.002173"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Formatted Date: ${formatted_date} | Fetched Date: ${birthday}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-25T00:28:18.757715" elapsed="0.000472"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:27.484412" elapsed="1.672761"/>
+<status status="PASS" start="2025-09-25T00:28:18.526103" elapsed="0.232172"/>
 </kw>
 <var name="${user}">{'id': 3, 'name': 'Clementine Bauch', 'username': 'Samantha', 'email': 'Nathan@yesenia.net', 'address': {'street': 'Douglas Extension', 'suite': 'Suite 847', 'city': 'McKenziehaven', 'zipcode': '59590...</var>
-<status status="PASS" start="2025-09-24T15:01:23.005865" elapsed="6.151452"/>
+<status status="PASS" start="2025-09-25T00:28:16.190021" elapsed="2.568414"/>
 </iter>
 <iter>
 <kw name="Go To Customers Page" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:29.159454" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
+<msg time="2025-09-25T00:28:18.759394" level="INFO">Clicking element '(//p[text()="Customers"])[2]'.</msg>
 <arg>${nav_btn_customer}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.158856" elapsed="0.213501"/>
+<status status="PASS" start="2025-09-25T00:28:18.759112" elapsed="0.197343"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
+<arg>${table}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.372664" elapsed="0.059164"/>
+<status status="PASS" start="2025-09-25T00:28:18.956681" elapsed="0.290343"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:29.158173" elapsed="0.273888"/>
+<status status="PASS" start="2025-09-25T00:28:18.758745" elapsed="0.488965"/>
 </kw>
 <kw name="Create User" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:29.433297" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
+<msg time="2025-09-25T00:28:19.251800" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
 <arg>${customer_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.432961" elapsed="0.179734"/>
+<status status="PASS" start="2025-09-25T00:28:19.250877" elapsed="0.175254"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${customer_btn_save}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.613043" elapsed="0.270061"/>
+<status status="PASS" start="2025-09-25T00:28:19.426568" elapsed="0.054956"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:29.884422" level="INFO">Typing text 'Patricia' into text field '//input[@name="first_name"]'.</msg>
+<msg time="2025-09-25T00:28:19.482520" level="INFO">Typing text 'Patricia' into text field '//input[@name="first_name"]'.</msg>
 <arg>${customer_txt_fname}</arg>
 <arg>${user["name"].split(" ")[0]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:29.883379" elapsed="0.217735"/>
+<status status="PASS" start="2025-09-25T00:28:19.481772" elapsed="0.181773"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:30.102493" level="INFO">Typing text 'Lebsack' into text field '//input[@name="last_name"]'.</msg>
+<msg time="2025-09-25T00:28:19.664470" level="INFO">Typing text 'Lebsack' into text field '//input[@name="last_name"]'.</msg>
 <arg>${customer_txt_lname}</arg>
 <arg>${user["name"].split(" ")[1]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:30.101410" elapsed="0.232673"/>
+<status status="PASS" start="2025-09-25T00:28:19.663761" elapsed="0.098194"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:30.336145" level="INFO">Typing text 'Julianne.OConner@kory.org' into text field '//input[@name="email"]'.</msg>
+<msg time="2025-09-25T00:28:19.763024" level="INFO">Typing text 'Julianne.OConner@kory.org' into text field '//input[@name="email"]'.</msg>
 <arg>${customer_txt_email}</arg>
 <arg>${user["email"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:30.334436" elapsed="0.339473"/>
+<status status="PASS" start="2025-09-25T00:28:19.762188" elapsed="0.104708"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:19.867850" level="INFO">Sending key(s) ('CONTROL+A', 'BACKSPACE') to //input[@name="birthday"] element.</msg>
+<msg time="2025-09-25T00:28:20.163960" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-09-25T00:28:20.164049" level="INFO">Sending key A</msg>
+<msg time="2025-09-25T00:28:20.164080" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-09-25T00:28:20.172580" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-09-25T00:28:20.172646" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${customer_txt_birthday}</arg>
+<arg>CONTROL+A</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-25T00:28:19.867125" elapsed="0.311163"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:30.675584" level="INFO">Typing text '02142003' into text field '//input[@name="birthday"]'.</msg>
+<msg time="2025-09-25T00:28:20.179047" level="INFO">Typing text '11162000' into text field '//input[@name="birthday"]'.</msg>
 <arg>${customer_txt_birthday}</arg>
 <arg>${user["birthday"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:30.674252" elapsed="0.272347"/>
+<status status="PASS" start="2025-09-25T00:28:20.178453" elapsed="0.059933"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:30.951110" level="INFO">Typing text 'Hoeger Mall Apt. 692' into text field '//textarea[@name="address"]'.</msg>
+<msg time="2025-09-25T00:28:20.243898" level="INFO">Typing text 'Hoeger Mall Apt. 692' into text field '//textarea[@name="address"]'.</msg>
 <arg>${customer_txt_address}</arg>
 <arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:30.946910" elapsed="0.301141"/>
+<status status="PASS" start="2025-09-25T00:28:20.238612" elapsed="0.093385"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:31.249569" level="INFO">Typing text 'South Elvis' into text field '//input[@name="city"]'.</msg>
+<msg time="2025-09-25T00:28:20.333075" level="INFO">Typing text 'South Elvis' into text field '//input[@name="city"]'.</msg>
 <arg>${customer_txt_city}</arg>
 <arg>${user["address"]["city"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:31.248358" elapsed="0.246881"/>
+<status status="PASS" start="2025-09-25T00:28:20.332220" elapsed="0.117143"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:31.497088" level="INFO">Typing text 'HAS' into text field '//input[@name="stateAbbr"]'.</msg>
+<msg time="2025-09-25T00:28:20.450264" level="INFO">Typing text 'HAS' into text field '//input[@name="stateAbbr"]'.</msg>
 <arg>${customer_txt_stateAbbr}</arg>
 <arg>${user["address"]["stateAbbr"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:31.495559" elapsed="0.205453"/>
+<status status="PASS" start="2025-09-25T00:28:20.449585" elapsed="0.084852"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:31.702341" level="INFO">Typing text '53919-4257' into text field '//input[@name="zipcode"]'.</msg>
+<msg time="2025-09-25T00:28:20.538444" level="INFO">Typing text '53919-4257' into text field '//input[@name="zipcode"]'.</msg>
 <arg>${customer_txt_zipcode}</arg>
 <arg>${user["address"]["zipcode"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:31.701298" elapsed="0.264347"/>
+<status status="PASS" start="2025-09-25T00:28:20.535318" elapsed="0.095490"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:31.969175" level="INFO">Typing text 'ecLxr$!t' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:28:20.632162" level="INFO">Typing text 'iOvmWd8f' into text field '//input[@name="password"]'.</msg>
 <arg>${customer_txt_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:31.967589" elapsed="0.255248"/>
+<status status="PASS" start="2025-09-25T00:28:20.631118" elapsed="0.089847"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.224537" level="INFO">Typing text 'ecLxr$!t' into text field '//input[@name="confirm_password"]'.</msg>
+<msg time="2025-09-25T00:28:20.723735" level="INFO">Typing text 'iOvmWd8f' into text field '//input[@name="confirm_password"]'.</msg>
 <arg>${customer_txt_confirm_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.223154" elapsed="0.271172"/>
+<status status="PASS" start="2025-09-25T00:28:20.721334" elapsed="0.093045"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.496499" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
+<msg time="2025-09-25T00:28:20.814888" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
 <arg>${customer_btn_save}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.494899" elapsed="0.221544"/>
+<status status="PASS" start="2025-09-25T00:28:20.814607" elapsed="0.068778"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.862083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-92.png"&gt;&lt;img src="selenium-screenshot-92.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.717471" elapsed="0.144801"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Customer created</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:20.883537" elapsed="0.436962"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:29.432417" elapsed="3.430034"/>
+<status status="PASS" start="2025-09-25T00:28:19.249203" elapsed="2.071472"/>
 </kw>
 <kw name="Verify Customer Data" owner="CustomerPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>History</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.321746" elapsed="0.014062"/>
+</kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.901312" level="INFO">${first_name} = Patricia</msg>
+<msg time="2025-09-25T00:28:21.392823" level="INFO">${first_name} = Patricia</msg>
 <var>${first_name}</var>
 <arg>${customer_txt_fname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.864360" elapsed="0.037027"/>
+<status status="PASS" start="2025-09-25T00:28:21.336132" elapsed="0.056796"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.933301" level="INFO">${last_name} = Lebsack</msg>
+<msg time="2025-09-25T00:28:21.412733" level="INFO">${last_name} = Lebsack</msg>
 <var>${last_name}</var>
 <arg>${customer_txt_lname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.901884" elapsed="0.031491"/>
+<status status="PASS" start="2025-09-25T00:28:21.393529" elapsed="0.019262"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.965486" level="INFO">${customer_email} = Julianne.OConner@kory.org</msg>
+<msg time="2025-09-25T00:28:21.432395" level="INFO">${customer_email} = Julianne.OConner@kory.org</msg>
 <var>${customer_email}</var>
 <arg>${customer_txt_email}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.933637" elapsed="0.031930"/>
+<status status="PASS" start="2025-09-25T00:28:21.412974" elapsed="0.019495"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.991678" level="INFO">${customer_birthday} = 2003-02-14</msg>
-<var>${customer_birthday}</var>
+<msg time="2025-09-25T00:28:21.472183" level="INFO">${birthday} = 2000-12-11</msg>
+<var>${birthday}</var>
 <arg>${customer_txt_birthday}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.965840" elapsed="0.025913"/>
+<status status="PASS" start="2025-09-25T00:28:21.432705" elapsed="0.039573"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:21.517688" level="INFO">${customer_address} = Hoeger Mall Apt. 692</msg>
+<var>${customer_address}</var>
+<arg>${customer_txt_address}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.472604" elapsed="0.045255"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:21.586370" level="INFO">${customer_city} = South Elvis</msg>
+<var>${customer_city}</var>
+<arg>${customer_txt_city}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.518513" elapsed="0.068207"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:21.623464" level="INFO">${customer_state} = HAS</msg>
+<var>${customer_state}</var>
+<arg>${customer_txt_stateAbbr}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.587950" elapsed="0.035609"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:21.641280" level="INFO">${customer_zipcode} = 53919-4257</msg>
+<var>${customer_zipcode}</var>
+<arg>${customer_txt_zipcode}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.623917" elapsed="0.017436"/>
 </kw>
 <kw name="Format Date" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:32.994682" level="INFO">${formatted_date} = 2003-02-14</msg>
+<msg time="2025-09-25T00:28:21.644134" level="INFO">${formatted_date} = 2000-16-11</msg>
 <var>${formatted_date}</var>
 <arg>${user["birthday"]}</arg>
-<status status="PASS" start="2025-09-24T15:01:32.992379" elapsed="0.002409"/>
+<status status="PASS" start="2025-09-25T00:28:21.641589" elapsed="0.003118"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>'${formatted_date}'</arg>
-<arg>'${customer_birthday}'</arg>
+<arg>${user["name"].split(" ")[0]}</arg>
+<arg>${first_name}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.995093" elapsed="0.000500"/>
+<status status="PASS" start="2025-09-25T00:28:21.645193" elapsed="0.001072"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:32.996275" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:32.995856" elapsed="0.685896"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["name"].split(" ")[1]}</arg>
+<arg>${last_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.646558" elapsed="0.002837"/>
 </kw>
-<arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:32.862882" elapsed="0.819107"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["email"]}</arg>
+<arg>${customer_email}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.650050" elapsed="0.003020"/>
 </kw>
-<kw name="Verify User Is Added">
-<kw name="Go To Customers Page" owner="CustomerPage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:33.685610" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:33.685168" elapsed="0.528511"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
+<arg>${customer_address}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.653641" elapsed="0.004218"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:34.214139" elapsed="0.058974"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["city"]}</arg>
+<arg>${customer_city}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.658531" elapsed="0.002663"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:33.684592" elapsed="0.588707"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["stateAbbr"]}</arg>
+<arg>${customer_state}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.661755" elapsed="0.001943"/>
 </kw>
-<kw name="Refresh Current Page" owner="App">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:34.274350" level="INFO">Clicking button '//button[@aria-label="Refresh"]'.</msg>
-<arg>${btn_refresh}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:34.274020" elapsed="0.361995"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["zipcode"]}</arg>
+<arg>${customer_zipcode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.664132" elapsed="0.001877"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:34.636323" elapsed="0.054800"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:34.691399" elapsed="0.328903"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:34.273578" elapsed="0.746993"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:35.059019" level="INFO">${fetched_name} = P
-Patricia Lebsack</msg>
-<var>${fetched_name}</var>
-<arg>((${table})[1]//td)[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.020898" elapsed="0.038222"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;\\n&quot; in &quot;&quot;&quot;${fetched_name}&quot;&quot;&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-24T15:01:35.062760" level="INFO">${fetched_name} = Patricia Lebsack</msg>
-<var>${fetched_name}</var>
-<arg>"""${fetched_name}""".replace("\\n","")[1:]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.061733" elapsed="0.001159"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:35.059416" elapsed="0.003737"/>
-</branch>
-<status status="PASS" start="2025-09-24T15:01:35.059325" elapsed="0.004004"/>
-</if>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${user["name"]}</arg>
-<arg>${fetched_name}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.063571" elapsed="0.001551"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Formatted Date: ${formatted_date} | Fetched Date: ${birthday}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-25T00:28:21.666834" elapsed="0.000709"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:33.682422" elapsed="1.382870"/>
+<status status="PASS" start="2025-09-25T00:28:21.321030" elapsed="0.346659"/>
 </kw>
 <var name="${user}">{'id': 4, 'name': 'Patricia Lebsack', 'username': 'Karianne', 'email': 'Julianne.OConner@kory.org', 'address': {'street': 'Hoeger Mall', 'suite': 'Apt. 692', 'city': 'South Elvis', 'zipcode': '53919-4...</var>
-<status status="PASS" start="2025-09-24T15:01:29.157750" elapsed="5.907626"/>
+<status status="PASS" start="2025-09-25T00:28:18.758619" elapsed="2.909139"/>
 </iter>
 <iter>
 <kw name="Go To Customers Page" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:35.066705" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
+<msg time="2025-09-25T00:28:21.670493" level="INFO">Clicking element '(//p[text()="Customers"])[2]'.</msg>
 <arg>${nav_btn_customer}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.066356" elapsed="0.149895"/>
+<status status="PASS" start="2025-09-25T00:28:21.669698" elapsed="0.239676"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
+<arg>${table}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.216680" elapsed="0.057603"/>
+<status status="PASS" start="2025-09-25T00:28:21.909605" elapsed="0.243772"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:35.065903" elapsed="0.208567"/>
+<status status="PASS" start="2025-09-25T00:28:21.668962" elapsed="0.484505"/>
 </kw>
 <kw name="Create User" owner="CustomerPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:35.277880" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
+<msg time="2025-09-25T00:28:22.154079" level="INFO">Clicking element '//a[@aria-label="Create"]'.</msg>
 <arg>${customer_btn_create}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.277442" elapsed="0.147196"/>
+<status status="PASS" start="2025-09-25T00:28:22.153843" elapsed="0.045889"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${customer_btn_save}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.427868" elapsed="0.286323"/>
+<status status="PASS" start="2025-09-25T00:28:22.199898" elapsed="0.072210"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:35.715505" level="INFO">Typing text 'Chelsey' into text field '//input[@name="first_name"]'.</msg>
+<msg time="2025-09-25T00:28:22.279801" level="INFO">Typing text 'Chelsey' into text field '//input[@name="first_name"]'.</msg>
 <arg>${customer_txt_fname}</arg>
 <arg>${user["name"].split(" ")[0]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.714465" elapsed="0.205593"/>
+<status status="PASS" start="2025-09-25T00:28:22.274014" elapsed="0.238349"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:35.921363" level="INFO">Typing text 'Dietrich' into text field '//input[@name="last_name"]'.</msg>
+<msg time="2025-09-25T00:28:22.513502" level="INFO">Typing text 'Dietrich' into text field '//input[@name="last_name"]'.</msg>
 <arg>${customer_txt_lname}</arg>
 <arg>${user["name"].split(" ")[1]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:35.920335" elapsed="0.272726"/>
+<status status="PASS" start="2025-09-25T00:28:22.512597" elapsed="0.118400"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:36.195381" level="INFO">Typing text 'Lucio_Hettinger@annie.ca' into text field '//input[@name="email"]'.</msg>
+<msg time="2025-09-25T00:28:22.632343" level="INFO">Typing text 'Lucio_Hettinger@annie.ca' into text field '//input[@name="email"]'.</msg>
 <arg>${customer_txt_email}</arg>
 <arg>${user["email"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:36.193546" elapsed="0.307255"/>
+<status status="PASS" start="2025-09-25T00:28:22.631227" elapsed="0.102227"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:22.734286" level="INFO">Sending key(s) ('CONTROL+A', 'BACKSPACE') to //input[@name="birthday"] element.</msg>
+<msg time="2025-09-25T00:28:23.038054" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-09-25T00:28:23.038158" level="INFO">Sending key A</msg>
+<msg time="2025-09-25T00:28:23.038192" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-09-25T00:28:23.073602" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-09-25T00:28:23.073699" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${customer_txt_birthday}</arg>
+<arg>CONTROL+A</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-09-25T00:28:22.733698" elapsed="0.352368"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:36.504419" level="INFO">Typing text '08182005' into text field '//input[@name="birthday"]'.</msg>
+<msg time="2025-09-25T00:28:23.086808" level="INFO">Typing text '11272006' into text field '//input[@name="birthday"]'.</msg>
 <arg>${customer_txt_birthday}</arg>
 <arg>${user["birthday"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:36.501222" elapsed="0.245788"/>
+<status status="PASS" start="2025-09-25T00:28:23.086224" elapsed="0.117910"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:36.750147" level="INFO">Typing text 'Skiles Walks Suite 351' into text field '//textarea[@name="address"]'.</msg>
+<msg time="2025-09-25T00:28:23.206753" level="INFO">Typing text 'Skiles Walks Suite 351' into text field '//textarea[@name="address"]'.</msg>
 <arg>${customer_txt_address}</arg>
 <arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:36.747471" elapsed="0.301235"/>
+<status status="PASS" start="2025-09-25T00:28:23.204603" elapsed="0.318065"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:37.050294" level="INFO">Typing text 'Roscoeview' into text field '//input[@name="city"]'.</msg>
+<msg time="2025-09-25T00:28:23.523895" level="INFO">Typing text 'Roscoeview' into text field '//input[@name="city"]'.</msg>
 <arg>${customer_txt_city}</arg>
 <arg>${user["address"]["city"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:37.049068" elapsed="0.228945"/>
+<status status="PASS" start="2025-09-25T00:28:23.522960" elapsed="0.092960"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:37.281644" level="INFO">Typing text 'SSR' into text field '//input[@name="stateAbbr"]'.</msg>
+<msg time="2025-09-25T00:28:23.617079" level="INFO">Typing text 'SSR' into text field '//input[@name="stateAbbr"]'.</msg>
 <arg>${customer_txt_stateAbbr}</arg>
 <arg>${user["address"]["stateAbbr"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:37.278336" elapsed="0.201522"/>
+<status status="PASS" start="2025-09-25T00:28:23.616146" elapsed="0.074246"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:37.481825" level="INFO">Typing text '33263' into text field '//input[@name="zipcode"]'.</msg>
+<msg time="2025-09-25T00:28:23.691308" level="INFO">Typing text '33263' into text field '//input[@name="zipcode"]'.</msg>
 <arg>${customer_txt_zipcode}</arg>
 <arg>${user["address"]["zipcode"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:37.480634" elapsed="0.230383"/>
+<status status="PASS" start="2025-09-25T00:28:23.690617" elapsed="0.128216"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:37.713616" level="INFO">Typing text 'OSATV7wI' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-25T00:28:23.819948" level="INFO">Typing text 'YpLWBUrE' into text field '//input[@name="password"]'.</msg>
 <arg>${customer_txt_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:37.711344" elapsed="0.255698"/>
+<status status="PASS" start="2025-09-25T00:28:23.819071" elapsed="0.085983"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:37.969089" level="INFO">Typing text 'OSATV7wI' into text field '//input[@name="confirm_password"]'.</msg>
+<msg time="2025-09-25T00:28:23.906185" level="INFO">Typing text 'YpLWBUrE' into text field '//input[@name="confirm_password"]'.</msg>
 <arg>${customer_txt_confirm_password}</arg>
 <arg>${user["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:37.967353" elapsed="0.254072"/>
+<status status="PASS" start="2025-09-25T00:28:23.905288" elapsed="0.113197"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.223423" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
+<msg time="2025-09-25T00:28:24.019009" level="INFO">Clicking element '//button[@aria-label="Save"]'.</msg>
 <arg>${customer_btn_save}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.221725" elapsed="0.212297"/>
+<status status="PASS" start="2025-09-25T00:28:24.018710" elapsed="0.061760"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.595283" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-93.png"&gt;&lt;img src="selenium-screenshot-93.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.434345" elapsed="0.161159"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Customer created</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.080620" elapsed="0.460678"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:35.274822" elapsed="3.320901"/>
+<status status="PASS" start="2025-09-25T00:28:22.153619" elapsed="2.387961"/>
 </kw>
 <kw name="Verify Customer Data" owner="CustomerPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>History</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.545296" elapsed="0.037535"/>
+</kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.633142" level="INFO">${first_name} = Chelsey</msg>
+<msg time="2025-09-25T00:28:24.650848" level="INFO">${first_name} = Chelsey</msg>
 <var>${first_name}</var>
 <arg>${customer_txt_fname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.598289" elapsed="0.034952"/>
+<status status="PASS" start="2025-09-25T00:28:24.584238" elapsed="0.066950"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.665887" level="INFO">${last_name} = Dietrich</msg>
+<msg time="2025-09-25T00:28:24.699317" level="INFO">${last_name} = Dietrich</msg>
 <var>${last_name}</var>
 <arg>${customer_txt_lname}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.633583" elapsed="0.032425"/>
+<status status="PASS" start="2025-09-25T00:28:24.652400" elapsed="0.046995"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.698572" level="INFO">${customer_email} = Lucio_Hettinger@annie.ca</msg>
+<msg time="2025-09-25T00:28:24.733107" level="INFO">${customer_email} = Lucio_Hettinger@annie.ca</msg>
 <var>${customer_email}</var>
 <arg>${customer_txt_email}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.666317" elapsed="0.032347"/>
+<status status="PASS" start="2025-09-25T00:28:24.699667" elapsed="0.033497"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.731644" level="INFO">${customer_birthday} = 2005-08-18</msg>
-<var>${customer_birthday}</var>
+<msg time="2025-09-25T00:28:24.750674" level="INFO">${birthday} = 72006-02-11</msg>
+<var>${birthday}</var>
 <arg>${customer_txt_birthday}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.698993" elapsed="0.032746"/>
+<status status="PASS" start="2025-09-25T00:28:24.733374" elapsed="0.017360"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:24.772193" level="INFO">${customer_address} = Skiles Walks Suite 351</msg>
+<var>${customer_address}</var>
+<arg>${customer_txt_address}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.750941" elapsed="0.021313"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:24.786555" level="INFO">${customer_city} = Roscoeview</msg>
+<var>${customer_city}</var>
+<arg>${customer_txt_city}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.772461" elapsed="0.014185"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:24.803144" level="INFO">${customer_state} = SSR</msg>
+<var>${customer_state}</var>
+<arg>${customer_txt_stateAbbr}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.786977" elapsed="0.016257"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-09-25T00:28:24.820537" level="INFO">${customer_zipcode} = 33263</msg>
+<var>${customer_zipcode}</var>
+<arg>${customer_txt_zipcode}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.803556" elapsed="0.017057"/>
 </kw>
 <kw name="Format Date" owner="CustomLibrary">
-<msg time="2025-09-24T15:01:38.733361" level="INFO">${formatted_date} = 2005-08-18</msg>
+<msg time="2025-09-25T00:28:24.821872" level="INFO">${formatted_date} = 2006-27-11</msg>
 <var>${formatted_date}</var>
 <arg>${user["birthday"]}</arg>
-<status status="PASS" start="2025-09-24T15:01:38.732060" elapsed="0.001376"/>
+<status status="PASS" start="2025-09-25T00:28:24.820871" elapsed="0.001053"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>'${formatted_date}'</arg>
-<arg>'${customer_birthday}'</arg>
+<arg>${user["name"].split(" ")[0]}</arg>
+<arg>${first_name}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.733699" elapsed="0.000489"/>
+<status status="PASS" start="2025-09-25T00:28:24.822094" elapsed="0.000763"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:38.735500" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:38.734471" elapsed="0.403555"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["name"].split(" ")[1]}</arg>
+<arg>${last_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.823026" elapsed="0.000624"/>
 </kw>
-<arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:38.596200" elapsed="0.542053"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["email"]}</arg>
+<arg>${customer_email}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.823778" elapsed="0.000707"/>
 </kw>
-<kw name="Verify User Is Added">
-<kw name="Go To Customers Page" owner="CustomerPage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:39.142380" level="INFO">Clicking element '//a[@href="#/customers"]'.</msg>
-<arg>${nav_btn_customer}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:39.141828" elapsed="0.460444"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["street"]} ${user["address"]["suite"]}</arg>
+<arg>${customer_address}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.824632" elapsed="0.001204"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//table//tbody//tr</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:39.602546" elapsed="0.411302"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["city"]}</arg>
+<arg>${customer_city}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.826018" elapsed="0.000652"/>
 </kw>
-<status status="PASS" start="2025-09-24T15:01:39.140357" elapsed="0.873724"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["stateAbbr"]}</arg>
+<arg>${customer_state}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.826793" elapsed="0.000513"/>
 </kw>
-<kw name="Refresh Current Page" owner="App">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:40.015470" level="INFO">Clicking button '//button[@aria-label="Refresh"]'.</msg>
-<arg>${btn_refresh}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:40.014782" elapsed="0.458269"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${user["address"]["zipcode"]}</arg>
+<arg>${customer_zipcode}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.827419" elapsed="0.000493"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:40.473320" elapsed="0.074091"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${loading_icon}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-09-24T15:01:40.547697" elapsed="0.572193"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:40.014359" elapsed="1.105922"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-24T15:01:41.190338" level="INFO">${fetched_name} = C
-Chelsey Dietrich</msg>
-<var>${fetched_name}</var>
-<arg>((${table})[1]//td)[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-24T15:01:41.120875" elapsed="0.069775"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;\\n&quot; in &quot;&quot;&quot;${fetched_name}&quot;&quot;&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-24T15:01:41.194804" level="INFO">${fetched_name} = Chelsey Dietrich</msg>
-<var>${fetched_name}</var>
-<arg>"""${fetched_name}""".replace("\\n","")[1:]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-24T15:01:41.192805" elapsed="0.002274"/>
-</kw>
-<status status="PASS" start="2025-09-24T15:01:41.191459" elapsed="0.003863"/>
-</branch>
-<status status="PASS" start="2025-09-24T15:01:41.191312" elapsed="0.004207"/>
-</if>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${user["name"]}</arg>
-<arg>${fetched_name}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-09-24T15:01:41.195950" elapsed="0.003464"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Formatted Date: ${formatted_date} | Fetched Date: ${birthday}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-25T00:28:24.828027" elapsed="0.000393"/>
 </kw>
 <arg>${user}</arg>
-<status status="PASS" start="2025-09-24T15:01:39.138686" elapsed="2.061125"/>
+<status status="PASS" start="2025-09-25T00:28:24.542915" elapsed="0.286147"/>
 </kw>
 <var name="${user}">{'id': 5, 'name': 'Chelsey Dietrich', 'username': 'Kamren', 'email': 'Lucio_Hettinger@annie.ca', 'address': {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', '...</var>
-<status status="PASS" start="2025-09-24T15:01:35.065646" elapsed="6.134388"/>
+<status status="PASS" start="2025-09-25T00:28:21.668396" elapsed="3.160792"/>
 </iter>
 <var>${user}</var>
 <value>@{users}[:5]</value>
-<status status="PASS" start="2025-09-24T15:01:09.561218" elapsed="31.639049"/>
+<status status="PASS" start="2025-09-25T00:28:09.868297" elapsed="14.961016"/>
 </for>
-<status status="PASS" start="2025-09-24T15:01:09.324637" elapsed="31.876693"/>
+<status status="PASS" start="2025-09-25T00:28:09.486513" elapsed="15.343270"/>
 </test>
-<status status="PASS" start="2025-09-24T15:00:54.001904" elapsed="47.201990"/>
+<status status="PASS" start="2025-09-25T00:27:56.270037" elapsed="28.561566"/>
 </suite>
 <statistics>
 <total>

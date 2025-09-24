@@ -13,7 +13,8 @@ class CustomLibrary():
         return users
     
     def get_random_birthday(self):
-        return str(random.randint(1,12)).zfill(2) + str(random.randint(1,28)).zfill(2)+str(random.randint(1999,2006))
+        return str(random.randint(1, 12)).zfill(2)+str(random.randint(1,28)).zfill(2)+str(random.randint(1999,2006))
+
     
     def generate_password(self, length=8):
         chars = string.ascii_letters + string.digits + "!@#$%"
@@ -23,4 +24,4 @@ class CustomLibrary():
         month = date[:2]
         day = date[2:4]
         year = date[4:]
-        return f"{year}-{month}-{day}"
+        return f"{year}-{day}-{month}"

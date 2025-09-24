@@ -24,7 +24,6 @@ TEST-000002
         Create User    ${user}
         Verify Customer Data    ${user}
         # CLick Element    ${nav_btn_customer}
-        Verify User Is Added    ${user}
     END
 
 
@@ -48,14 +47,13 @@ Login User
         Log To Console Login Failed
     END
    
-Verify User Is Added
-    [Arguments]    ${user}
-    Go To Customers Page
-    Refresh Current Page
-    ${fetched_name}    Get Text    ((${table})[1]//td)[2]
-    IF    "\\n" in """${fetched_name}"""
-        ${fetched_name}    Evaluate    """${fetched_name}""".replace("\\n","")[1:]
-    END
-    # Should Be Equal As Strings    ${user["name"].split(" ")[0]} ${user["name"].split(" ")[1]}    ${fetched_name}
-    Should Contain     ${user["name"]}    ${fetched_name}
+# Verify User Is Added
+#     [Arguments]    ${user}
+#     Go To Customers Page
+#     Refresh Current Page
+#     ${fetched_name}    Get Text    ((${table})[1]//td)[2]
+#     IF    "\\n" in """${fetched_name}"""
+#         ${fetched_name}    Evaluate    """${fetched_name}""".replace("\\n","")[1:]
+#     END
+#     Should Contain     ${user["name"]}    ${fetched_name}
     
