@@ -44,7 +44,7 @@ Login User
     IF    ${status}
         Log To Console    Login Successful
     ELSE 
-        Log To Console Login Failed
+        Log To Console     Login Failed
     END
    
 # Verify User Is Added

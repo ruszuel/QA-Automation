@@ -2,13 +2,14 @@
 
 Library    SeleniumLibrary
 Variables    ../customerpage.py
+Variables    ../variables.py
 Library    ../CustomLibrary.py
 
 *** Keywords ***
 
 Go To Customers Page
     CLick Element    ${nav_btn_customer}
-    Wait Until Element Is Visible    ${table}    timeout=10s
+    Wait Until Element Is Visible    ${table}    
 
 Create User
     [Arguments]    ${user}
@@ -17,7 +18,6 @@ Create User
     Input Text    ${customer_txt_fname}    ${user["name"].split(" ")[0]}   
     Input Text    ${customer_txt_lname}    ${user["name"].split(" ")[1]}  
     Input Text    ${customer_txt_email}    ${user["email"]}
-    Press Keys    ${customer_txt_birthday}   CONTROL+A    BACKSPACE
     Input Text    ${customer_txt_birthday}    ${user["birthday"]}
     Input Text    ${customer_txt_address}    ${user["address"]["street"]} ${user["address"]["suite"]} 
     Input Text    ${customer_txt_city}    ${user["address"]["city"]}    
@@ -50,5 +50,6 @@ Verify Customer Data
     Should Be Equal As Strings    ${user["address"]["city"]}    ${customer_city}
     Should Be Equal As Strings    ${user["address"]["stateAbbr"]}    ${customer_state}
     Should Be Equal As Strings    ${user["address"]["zipcode"]}    ${customer_zipcode}
+    Should Be Equal As Strings    ${formatted_date}    ${birthday}
     Log To Console    Formatted Date: ${formatted_date} | Fetched Date: ${birthday}
     # CLick Element    ${nav_btn_customer}
