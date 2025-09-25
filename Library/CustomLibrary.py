@@ -25,3 +25,10 @@ class CustomLibrary():
         day = date[2:4]
         year = date[4:]
         return f"{year}-{month}-{day}"
+    
+    def parse_currency(self, value):
+        try:
+            clean_value = value.replace('$', '').replace(',', '')
+            return float(clean_value)
+        except ValueError:
+            raise ValueError(f"Invalid currency format: {value}")

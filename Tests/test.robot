@@ -5,6 +5,7 @@ Library    ../Library/CustomLibrary.py
 Resource    ../Resources/App.resource
 Resource    ../Resources/CustomerPage.resource
 Resource    ../Resources/Task_4.resource
+Resource    ../Resources/Task_5.resource
 Suite Setup    Login User    ${USERNAME}   ${PASSWORD}
 
 *** Variables ***
@@ -38,6 +39,9 @@ TEST_000002
 TEST_000003
     Log Users Data
 
+TEST_000004
+    Analyze Users Spending
+    
 *** Keywords ***
 Launch Browser
     [Arguments]    ${url}    ${element_to_wait}
