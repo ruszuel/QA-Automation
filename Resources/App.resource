@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    ../CustomLibrary.py
-Variables    ../variables.py
+Library    ../Library/CustomLibrary.py
+Variables    ../Variables/variables.py
 
 *** Keywords ***
 

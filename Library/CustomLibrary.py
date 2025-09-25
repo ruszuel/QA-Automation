@@ -24,4 +24,4 @@ class CustomLibrary():
         month = date[:2]
         day = date[2:4]
         year = date[4:]
-        return f"{year}-{day}-{month}"
+        return f"{year}-{month}-{day}"

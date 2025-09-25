@@ -1,9 +1,9 @@
 *** Settings ***
 
 Library    SeleniumLibrary
-Variables    ../customerpage.py
-Variables    ../variables.py
-Library    ../CustomLibrary.py
+Variables    ../Variables/customerpage.py
+Variables    ../Variables/variables.py
+Library    ../Library/CustomLibrary.py
 
 *** Keywords ***
 
@@ -53,3 +53,37 @@ Verify Customer Data
     Should Be Equal As Strings    ${formatted_date}    ${birthday}
     Log To Console    Formatted Date: ${formatted_date} | Fetched Date: ${birthday}
     # CLick Element    ${nav_btn_customer}
+Update Existing User    
+    [Arguments]    ${customer}
+    Wait Until Element Is Visible    xpath=//table//tbody//tr[${customer["id"]}]
+    Click Element    xpath=//table//tbody//tr[${customer["id"]}]
+    
+    Wait Until Element Is Visible    ${customer_btn_save} 
+    Press Keys     ${customer_txt_fname}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_fname}    ${customer["name"].split(" ")[0]}
+
+    Press Keys     ${customer_txt_lname}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_lname}    ${customer["name"].split(" ")[1]}
+
+    Press Keys     ${customer_txt_email}    CTRL+A     BACKSPACE  
+    Input Text    ${customer_txt_email}    ${customer["email"]}
+
+    Input Text    ${customer_txt_birthday}    ${customer["birthday"]}
+
+    Press Keys     ${customer_txt_address}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_address}    ${customer["address"]["street"]} ${customer["address"]["suite"]} 
+
+    Press Keys     ${customer_txt_city}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_city}    ${customer["address"]["city"]}   
+
+    Press Keys     ${customer_txt_stateAbbr}    CTRL+A     BACKSPACE 
+    Input Text    ${customer_txt_stateAbbr}   ${customer["address"]["stateAbbr"]}
+
+    Press Keys     ${customer_txt_zipcode}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_zipcode}    ${customer["address"]["zipcode"]}
+
+    Press Keys     ${customer_txt_password}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_password}    ${customer["password"]}
+    Press Keys     ${customer_txt_confirm_password}    CTRL+A     BACKSPACE
+    Input Text    ${customer_txt_confirm_password}    ${customer["password"]}
+    Click Element    ${customer_btn_save}   

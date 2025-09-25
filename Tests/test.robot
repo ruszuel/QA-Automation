@@ -1,9 +1,11 @@
 *** Settings ***
 
 Library    SeleniumLibrary
-Library    ../CustomLibrary.py
+Library    ../Library/CustomLibrary.py
 Resource    ../Resources/App.resource
 Resource    ../Resources/CustomerPage.resource
+Resource    ../Resources/Task_4.resource
+Suite Setup    Login User    ${USERNAME}   ${PASSWORD}
 
 *** Variables ***
 ${URL}    https://marmelab.com/react-admin-demo
@@ -11,21 +13,30 @@ ${USERNAME}    demo
 ${PASSWORD}    demo
 
 *** Test Cases ***
-TEST-000001
-    [Documentation]    This is a sample test case.
-    Launch Browser    ${URL}    ${login_txt_username}
-    Login User    ${USERNAME}   ${PASSWORD}
-    Sleep    10s
+# TEST-000001
+#     [Documentation]    This is a sample test case.
+#     Launch Browser    ${URL}    ${login_txt_username}
+#     Login User    ${USERNAME}   ${PASSWORD}
     
-TEST-000002
+TEST-000001
     ${users}    Get Random Users 
     FOR    ${user}    IN    @{users}[:5]
         Go To Customers Page
         Create User    ${user}
         Verify Customer Data    ${user}
-        # CLick Element    ${nav_btn_customer}
+        Verify User Is Added    ${user}
     END
 
+TEST_000002
+    ${customers}    Get Random Users 
+    FOR    ${customer}    IN    @{customers}[5:10]
+        Go To Customers Page
+        Update Existing User    ${customer}
+        Sleep    3s
+    END
+
+TEST_000003
+    Log Users Data
 
 *** Keywords ***
 Launch Browser
@@ -35,6 +46,7 @@ Launch Browser
 
 Login User
     [Arguments]    ${username}=${USERNAME}    ${password}=${PASSWORD}
+    Launch Browser    ${URL}    ${login_txt_username}
     Input Text    ${login_txt_username}    ${username}
     Input Text    ${login_txt_password}    ${password}
     Click Button    ${login_btn_submit}
@@ -47,13 +59,13 @@ Login User
         Log To Console     Login Failed
     END
    
-# Verify User Is Added
-#     [Arguments]    ${user}
-#     Go To Customers Page
-#     Refresh Current Page
-#     ${fetched_name}    Get Text    ((${table})[1]//td)[2]
-#     IF    "\\n" in """${fetched_name}"""
-#         ${fetched_name}    Evaluate    """${fetched_name}""".replace("\\n","")[1:]
-#     END
-#     Should Contain     ${user["name"]}    ${fetched_name}
+Verify User Is Added
+    [Arguments]    ${user}
+    Go To Customers Page
+    Refresh Current Page
+    ${fetched_name}    Get Text    ((${table})[1]//td)[2]
+    IF    "\\n" in """${fetched_name}"""
+        ${fetched_name}    Evaluate    """${fetched_name}""".replace("\\n","")[1:]
+    END
+    Should Be Equal As Strings      '${user["name"]}'    '${fetched_name}'
     
